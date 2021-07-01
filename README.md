@@ -11,5 +11,8 @@ At a minimum, OD datasets include an origin ID, a destination ID, and a count of
 # Identifying and analyzing communities using origin-destination data
 
 > **Source:** [A spatially aware method for mapping movement-based and place-based regions from spatial flow networks](https://onlinelibrary.wiley.com/doi/full/10.1111/tgis.12772). Transactions in GIS, 20 June 2021.
-> **Source:** [NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks](https://networkx.org/).
+
+> **Source:** [NetworkX](https://networkx.org/) is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.
+
+
 
