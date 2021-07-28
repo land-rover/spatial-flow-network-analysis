@@ -2,7 +2,7 @@
 
 Origin-destination (OD) data represents movement through geographic space, from an origin (O) to a destination (D). Sometimes also called "flow data," OD datasets contain details of trips between two geographic points or, more commonly, zones (which are often represented by a zone centroid).
 
-Origin-destination flow data are common across many application areas in geography and are used to model many different types of movement processes, for example commuting, international migration, and urban transportation.  Recently, methods of network analysis have been applied successfully to analyze the structure of mobility flows inferred from cell phone data.
+Origin-destination flow data are common across many application areas in geography and are used to model many different types of movement processes, for example commuting, migration, and trade.  Recently, methods of network analysis have been applied successfully to analyze the structure of mobility flows inferred from cell phone data.
 
 Example OD datasets are available from the U.S. Census Bureau [(LEHD Origin-Destination Employment Statistics)](https://lehd.ces.census.gov/data/#lodes) and Safegraph [(Neighborhood Patterns)](https://www.safegraph.com/neighborhood-patterns).
 
@@ -14,5 +14,4 @@ At a minimum, OD datasets include an origin ID, a destination ID, and a count of
 
 > **Source:** [NetworkX](https://networkx.org/) is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.
 
-
-
+> **Source:** [CDLIB: A python library to extract, compare and evaluate communities from complex networks](https://doi.org/10.1007/s41109-019-0165-9). Applied Network Science, 2019.
