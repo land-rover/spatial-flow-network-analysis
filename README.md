@@ -16,8 +16,6 @@ At a minimum, OD datasets include an origin ID, a destination ID, and a count of
 
 > **Source:** [CDLIB: A python library to extract, compare and evaluate communities from complex networks](https://doi.org/10.1007/s41109-019-0165-9). Applied Network Science, 2019.
 
-> **Source:** [CDLIB: A python library to extract, compare and evaluate communities from complex networks](https://doi.org/10.1007/s41109-019-0165-9). Applied Network Science, 2019.
-
 In network science, a community is a collection of nodes (or edges) that are more closely related to each other than to the other nodes (or edges) in the graph.
 
 The python library CDLIB offers easy and standardized access to the many methods for identifying and analyzing communities that now exist.
