@@ -18,6 +18,8 @@ At a minimum, OD datasets include an origin ID, a destination ID, and a count of
 
 In network science, a community is a collection of nodes (or edges) that are more closely related to each other than to the other nodes (or edges) in the graph.
 
-The python library CDLIB offers easy and standardized access to the many methods for identifying and analyzing communities that now exist.
+The python library CDLIB offers easy and standardized access to methods for identifying and analyzing communities in a dataset.  
 
-Following Sekulic, Long, and Demsar (2021), we use DC-Baltimore commuting data extracted from U.S. Census Bureau LEHD Origin-Destination Employment Statistics to identify travel-to-work areas in that region.  The data consists of 372,634 undirected edges, each defined by two census blocks (x_geocode, y_geocode) and a geographical weight (GW) that reflects both the geographic distance between the blocks and the number of workers who live in one block and work in the other.
+Following Sekulic, Long, and Demsar (2021), we use DC-Baltimore commuting data extracted from the U.S. Census Bureau's LEHD Origin-Destination Employment Statistics release to identify travel-to-work areas in that region.  The data consists of 372,634 undirected edges, each connecting two census blocks that house and host a commuting worker--one in the Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area (MSA) and the other in the Baltimore-Columbia-Towson, MD MSA.  On average, 30.2 miles separate the census block pairs, and there are 63,728 census blocks in the region.  
+
+In 2018, there were 172,500 DC-based Baltimore commuters and 213,491 Baltimore-based DC commuters in the region.  Our analysis uncovers 7,742 non-trivial travel-to-work areas, i.e. communities consisting of three or more edges, with the largest of these consisting of 4,962 edges.
