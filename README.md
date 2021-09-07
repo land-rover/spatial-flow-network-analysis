@@ -6,7 +6,7 @@ Communication, social, and trade networks each take their names from the kind of
 
 While techniques for spatial-flow network analysis are not new, the widespread availability of large spatial-flow network datasets is new.
 
-For example, large spatial-flow network datasets are available from the U.S. Census Bureau [(LEHD Origin-Destination Employment Statistics)](https://lehd.ces.census.gov/data/#lodes) and Safegraph [(Neighborhood Patterns)](https://www.safegraph.com/neighborhood-patterns) at very low cost.
+Large spatial-flow network datasets are available from the U.S. Census Bureau [(LEHD Origin-Destination Employment Statistics)](https://lehd.ces.census.gov/data/#lodes) and Safegraph [(Neighborhood Patterns)](https://www.safegraph.com/neighborhood-patterns) for free.
 
 # Identifying and analyzing communities in a spatial-flow network of DC-Baltimore commuting data 
 
