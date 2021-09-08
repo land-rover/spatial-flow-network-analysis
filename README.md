@@ -22,10 +22,23 @@ The python library CDLIB offers easy and standardized access to methods for iden
 
 Following Sekulic, Long, and Demsar (2021), we use DC-Baltimore commuting data extracted from the U.S. Census Bureau's 2018 LEHD Origin-Destination Employment Statistics release to identify travel-to-work areas in that region.  
 
-The data consists of 372,634 undirected edges, each connecting two census blocks that house and host a commuting worker--one in the Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area (MSA) and the other in the Baltimore-Columbia-Towson, MD MSA.  On average, 30.2 miles separate the census block pairs, and there are 63,728 census blocks in the region total.  
+The data consists of 372,634 undirected edges, each connecting two census blocks that house and host a commuting worker--one in the Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area (MSA) and the other in the Baltimore-Columbia-Towson, MD MSA.  On average, 30.2 miles separate the census block pairs, and there are 63,728 census blocks in the region that house or host a commuting worker.  
 
 In 2018, there were 172,500 DC-based Baltimore commuters and 213,491 Baltimore-based DC commuters in the region.  Our analysis uncovers 5,796 non-trivial travel-to-work areas (i.e. communities with more than three edges) with the largest of these consisting of 4,962 edges.  On average, non-trivial travel-to-work areas contain 18 edges.
 
 Here is a basemap of the DC-Baltimore region, displayed on a Leaflet map via folium.
 ![](https://i.ibb.co/T2wBSpN/basemap.png)
 # Questions and Answers
+1. What does a community look like?
+
+A community is a collection of nodes (or edges) that are more closely related to each other than to the other nodes (or edges) in the graph.  
+
+This collection can be presented in any number of ways, depending on the question of interest.  In what follows, we find it useful to present a community as (1) a union of census block polygon geometries, (2) a convex hull of census block centroids, and (3) a bounding box of the convex hull of census block centroids.  
+
+Each representation is shown below for a single community of 15 commuting workers, each housed or hosted in one of 6 census blocks (nodes), connected by 5 distinct paths (edges).
+
+1. Polygon Union
+2. Convex Hull
+ ![](https://i.ibb.co/fNtb3GX/basemap-convexhull.png)
+ 
+ 3. Bounding Box
