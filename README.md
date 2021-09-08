@@ -33,12 +33,12 @@ Here is a basemap of the DC-Baltimore region, displayed on a Leaflet map via fol
 
 A community is a collection of nodes (or edges) that are more closely related to each other than to the other nodes (or edges) in the graph.  
 
-This collection can be presented in any number of ways, depending on the question of interest.  In what follows, we find it useful to present a community as (1) a union of census block polygon geometries, (2) a convex hull of census block centroids, and (3) a bounding box of the convex hull of census block centroids.  
+Such a collection can be presented in any number of ways, depending on the question of interest.  In what follows, we find it useful to present a community as (1) a union of census block polygon geometries, (2) a convex hull of census block centroids, and (3) a bounding box of the convex hull of census block centroids.  
 
-Each representation is shown below for a single community of 15 commuting workers, each housed or hosted in one of 6 census blocks (nodes), connected by 5 distinct paths (edges).
+Each representation is shown below for a single community consisting of 15 commuting workers, each housed or hosted in one of 6 census blocks (nodes) that are connected by 5 distinct paths (edges).
 
 1. Polygon Union
 2. Convex Hull
- ![](https://i.ibb.co/fNtb3GX/basemap-convexhull.png)
+![](https://i.ibb.co/fNtb3GX/basemap-convexhull.png)
  
  3. Bounding Box
