@@ -26,4 +26,6 @@ The data consists of 372,634 undirected edges, each connecting two census blocks
 
 In 2018, there were 172,500 DC-based Baltimore commuters and 213,491 Baltimore-based DC commuters in the region.  Our analysis uncovers 5,796 non-trivial travel-to-work areas (i.e. communities with more than three edges) with the largest of these consisting of 4,962 edges.  On average, non-trivial travel-to-work areas contain 18 edges.
 
+Here is a basemap of the DC-Baltimore region, displayed on a Leaflet map via folium.
+![](https://ibb.co/8smDpTQ).
 # Questions and Answers
