@@ -37,8 +37,10 @@ Such a collection can be presented in any number of ways, depending on the quest
 
 Each representation is shown below for a single community consisting of 15 commuting workers, each housed or hosted in one of 6 census blocks (nodes) that are connected by 5 distinct paths (edges).
 
-1. Polygon Union
-2. Convex Hull
+* Polygon Union
+
+* Convex Hull
+
 ![](https://i.ibb.co/fNtb3GX/basemap-convexhull.png)
  
- 3. Bounding Box
+* Bounding Box
