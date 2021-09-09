@@ -39,6 +39,7 @@ Each representation is shown below for a single community which happens to consi
 * Polygon Union
 
 ![](https://i.ibb.co/KNdBwM5/basemap-blocks.png)
+
 For readability, the centroids of each census block are shown with markers.  
 
 According to the Census Bureau, census blocks are statistical areas bounded by visible features such as roads, streams, and railroad tracks, and by nonvisible boundaries such as property lines, city, township, school district, county limits and short line-of-sight extensions of roads.  Generally small in size, census blocks can be as small as 30,000 square feet.  In remote areas, however, census blocks may encompass hundreds of square miles.
@@ -46,7 +47,11 @@ According to the Census Bureau, census blocks are statistical areas bounded by v
 * Convex Hull
 
 ![](https://i.ibb.co/fNtb3GX/basemap-convexhull.png)
- 
+
+The convex hull may be visualized as the shape enclosed by a rubber band stretched around the census block centroids. 
+
 * Bounding Box
 
 ![](https://i.ibb.co/pWkrbJc/basemap-envelope.png)
+
+The bounding box is the smallest rectangle within which all the points in the convex hull lie.
