@@ -27,12 +27,12 @@ The data consists of 372,634 undirected edges, each connecting two census blocks
 In 2018, there were 172,500 DC-based Baltimore commuters and 213,491 Baltimore-based DC commuters in the region.  Our analysis uncovers 5,796 non-trivial travel-to-work areas (i.e. communities with more than three edges) with the largest of these consisting of 4,962 edges.  On average, non-trivial travel-to-work areas contain 18 edges.
 
 # Preliminary Observations
-Here is a basemap of the DC-Baltimore region, displayed on a Leaflet map via folium.
+Here is a basemap of the DC-Baltimore region, displayed on a Leaflet map via [folium](http://python-visualization.github.io/folium/).
 ![](https://i.ibb.co/T2wBSpN/basemap.png)
 
 A community is a collection of nodes (or edges) that are more closely related to each other than to the other nodes (or edges) in the graph.  Such a collection can be mapped in any number of ways, depending on the question of interest.  
 
-In what follows, we find it useful to present a community as (1) a union of census block polygon geometries, (2) a convex hull of census block centroids, and (3) a bounding box of the convex hull of census block centroids.  
+In what follows, we find it useful to visualize a community as (1) a union of census block polygon geometries, (2) a convex hull of census block centroids, and (3) a bounding box of the convex hull of census block centroids.  
 
 Each representation is shown below for a reference community which happens to consist of 15 commuting workers, each housed or hosted in one of 6 census blocks (nodes) that are connected by 5 distinct paths (edges).
 
@@ -42,19 +42,19 @@ Each representation is shown below for a reference community which happens to co
 
 Census blocks are statistical areas bounded by visible features such as roads, streams, and railroad tracks, and by nonvisible boundaries such as property lines, city, township, school district, county limits and short line-of-sight extensions of roads.  They are generally small in size, as small as 30,000 square feet.  In remote areas, however, census blocks may encompass hundreds of square miles.
 
-For readability, the census block centroids have been tagged with markers.
+For readability, the census block centroids of the reference community have been tagged with markers.
  
 * Convex Hull
 
 ![](https://i.ibb.co/fNtb3GX/basemap-convexhull.png)
 
-The convex hull may be visualized as the shape enclosed by a rubber band stretched around the census block centroids. 
+The convex hull is best thought of as the shape enclosed by a rubber band stretched around the census block centroids. 
 
 * Bounding Box
 
 ![](https://i.ibb.co/pWkrbJc/basemap-envelope.png)
 
-The bounding box is the smallest rectangle within which all the points in the convex hull lie.
+The bounding box is the smallest rectangle that can enclose the convex hull.
 
 # Characterizing Patterns of Movement in a Community
 
@@ -62,35 +62,31 @@ A community is a collection of nodes (or edges) that are more closely related to
 
 In the DC-Baltimore commuting data, communities can be interpreted as "travel-to-work areas" in the DC-Baltimore region.
 
-We are interested in distinguishing these communities, first according to the patterns of movement and second according to the socioeconomic characterisitics of the workers who belong to them.
+We are interested in distinguishing these communities, first according to their patterns of movement and second according to the socioeconomic characterisitics of the workers who belong to them.
 
 ## Characterizing Patterns of Movement in a Community
 
-Sekulic, Long, and Demsar (2021) offer a number of statistics for characterizing patterns of movement in a community.  We illustrate each of them below.
+Sekulic, Long, and Demsar (2021) offer a number of statistics for characterizing patterns of movement in a community.  Many of these are derived from the distribution of a community's edge bearings, which quantify the directional relationship between any two nodes connected by an edge.  
+![](https://i.ibb.co/6w91qsn/bearing.png)
 
-### Standard Deviation of Flow Bearings
-The standard deviation of the bearings of all flows in a spatial-flow network community identifies the level of directional homogeneity in those flows.  
+If the standard deviation of the distribution of edge bearings is small, all a community's edges point in roughly the same direction.  Sekulic, Long, and Demsar (2021) use this to distinguish movement-based communities from place-based communitiers where there is no specific direction to the movements.
+
+Since we have deliberatley chosen to analyze edges that connect DC-based nodes to Baltimore-based nodes, the communities we study are movement-based and the corresponding range of edge standard deviations is small.
+
+In fact, among the 5,796 non-trivial communities, the smallest bearing standard deviation is 0.01 and the largest is 1.76.  Both measurements indicate communities with a slender convex hull, as shown below.
 
 Our reference community has a bearing standard deviation of 0.27.
 
-Among the 5,796 non-trivial communities, the smallest bearing standard deviation is 0.01 and the largest is 1.76.
+![](https://i.ibb.co/WcGhXyW/minBsd.png)
+![](https://i.ibb.co/GWJtRDX/maxBsd.png)
 
-A small bearing standard deviation indicates that the flows in that community move in roughly the same direction.
-![](https://i.ibb.co/rckD59x/minBsd.png)
-![](https://i.ibb.co/wr9k2pY/maxBsd.png)
+Another set of useful statistics are derived from the convex hull.  These include the area, which quantifies the magnitude of movement, and the  bounding box elongation, which is the ratio between its longest and shortest sides.
 
-### Kurtosis of Flow Bearings
-The kurtosis of the bearings of all flows in a spatial-flow network community identifies concentrated movement in a single direction.  A small bearing kurtosis indicates that the distribution of bearings is peaked around its average, with very few observations in the tails.
+As mentioned, the origin-destination pairs we study are in different metropolitan regions, and they are separated by a distance of 30 miles on average.  The corresponding convex hulls, therefore, generally have areas on the order of hundreds of square miles.
 
-Our reference community has a bearing kurtosis of -1.52.
+Among the 5,796 non-trivial communities, the smallest convex hull has an area of x.xx square miles, while the the largest convex hull has an area of y.yy square miles.
 
-Among the 5,796 non-trivial communities, the smallest bearing kurtosis is -2.00 and the largest is 25.61.
-
-![](https://i.ibb.co/L9WRrDW/minBkt.png)
-![](https://i.ibb.co/5jPxMGG/maxBkt.png)
-
-### Convex Hull Area and Elongation 
-
-
+The convex hull of our reference community has an area of 167 square miles and an elongation of 2.14, confirming the rectangular shape of its bounding box.
 
 ## Characterizing Socioeconomic Characteristics of a Community
+Given our focus on movement-based communities, it is more interesting to study the people that make them up.
