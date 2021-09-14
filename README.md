@@ -22,9 +22,9 @@ The python library CDLIB offers easy and standardized access to methods for iden
 
 We use CDLIB to implement the community detection technique of Sekulic, Long, and Demsar (2021) on DC-Baltimore commuting data extracted from the U.S. Census Bureau's 2018 LEHD Origin-Destination Employment Statistics release.  
 
-The data consists of 372,634 undirected edges, each connecting two census blocks from among the 63,728 that house and host a commuting worker--one in the Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area (MSA) and the other in the Baltimore-Columbia-Towson, MD MSA.  On average, 30.2 miles separate the census block pairs.
+The data consists of 372,634 undirected edges, each connecting two census blocks from among the 63,728 that house or host a commuting worker--one in the Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area (MSA) and the other in the Baltimore-Columbia-Towson, MD MSA.  On average, 30.2 miles separate the census block pairs.
 
-In 2018, there were 172,500 DC-based Baltimore commuters and 213,491 Baltimore-based DC commuters in the region.  Our analysis uncovers 5,796 non-trivial communities (i.e. communities with more than three edges) with the largest of these consisting of 4,962 edges.  On average, non-trivial travel-to-work areas contain 18 edges.
+In 2018, there were 172,500 DC-based Baltimore commuters and 213,491 Baltimore-based DC commuters in the region.  Our analysis uncovers 5,796 non-trivial communities (i.e. communities with more than three edges) with the largest of these consisting of 4,962 edges.  On average, non-trivial communities contain 18 edges.
 
 # Preliminary Observations
 Here is a basemap of the DC-Baltimore region, displayed on a Leaflet map via [folium](http://python-visualization.github.io/folium/).
@@ -62,7 +62,7 @@ A community is a collection of nodes (or edges) that are more closely related to
 
 Recently, planners have started to apply the network science concept of community to the problem of identifying "travel-to-work areas," spatially contiguous regions in which labor supply and demand are equal.
   
-Here we are interested in distinguishing these communities, first according to their patterns of movement and second according to the socioeconomic characterisitics of the workers who belong to them.
+We are interested in distinguishing these communities in the DC-Baltimore region, first according to their patterns of movement and second according to the socioeconomic characterisitics of the workers who belong to them.
 
 ## Characterizing Patterns of Movement in a Community
 
@@ -83,9 +83,9 @@ Figure 1.
 ![](https://i.ibb.co/GWJtRDX/maxBsd.png)
 Figure 2.
 
-Another set of useful statistics are derived from the convex hull.  These include the area, which quantifies the magnitude of movement, and the bounding box elongation, which is the ratio between its longest and shortest sides.
+Another set of useful statistics are derived from the convex hull.  These include the area, which quantifies the magnitude of movement overall, and the bounding box elongation, which is the ratio between its longest and shortest sides.
 
-As mentioned, the origin-destination pairs we study are in different metropolitan regions, separated by a distance of 30 miles on average.  The corresponding convex hulls, therefore, generally have areas on the order of hundreds or thousands of square miles.
+As mentioned, the origin-destination pairs we study are in different metropolitan regions, separated by a distance of 30 miles on average.  The corresponding convex hulls, therefore, generally have areas on the order of hundreds of square miles.
 
 Among the 5,796 non-trivial communities, the smallest convex hull has an area of 10.5 square miles, while the the largest convex hull has an area of 7469.8 square miles.
 
@@ -93,7 +93,7 @@ To see better the relationship between convex hull and elongation, note that the
 
 The larger convex hull in Figure 2 is obvious, but its large elongation stems not from size but from a substantially vertical orientation relative to the coordinate axes.
 
-By comparision, our reference community has an area of 167 square miles.  Its substantially diaganol orientation relative to the coordinate axes yields a much smaller elongation of 2.14, more comparable to the elongation of the convex hull shown in Figure 1 (which also has a diaganol orientation).  
+By comparision, our reference community has an area of 167 square miles.  Its substantially diaganol orientation relative to the coordinate axes yields an elongation of 2.14, more comparable to the elongation of the convex hull shown in Figure 1 (which also has a diaganol orientation).  
 
 ## Characterizing Socioeconomic Characteristics of a Community
 Given our focus on movement-based communities, it is more interesting to study the people that make them up.
