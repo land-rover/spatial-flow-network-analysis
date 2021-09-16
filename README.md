@@ -104,6 +104,8 @@ Census Block (O) | Census Block (D) | Total Number of Workers | 29 or younger | 
 240276011042007 | 240317009012008 | 2 | - | - | - | - | - | - | - | - | - |
 240276011042007 | 240338072001001 | 6 | - | - | - | - | - | - | - | - | - |
 240276011042007 | 240317050004029 | 1 | - | - | - | - | - | - | - | - | - |
-240276011042007 | 240317060131014 | 4 | - | - | - | - | - | - | - | - | - 
+240276011042007 | 240317060131014 | 4 | - | - | - | - | - | - | - | - | - |
  |  |  |  |  |  |  |  |  |  |  |  |
-| | TOTALS | 15 | - | - | - | - | - | - | - | - | - 
+| | TOTALS | 15 | - | - | - | - | - | - | - | - | - |
+
+Although our notation would appear to imply that all 15 workers reside in the same census block and work in different census blocks, this is not necessarily the case; the network edges are undirected.  Without further examination we don't know whether the commuting workers in this particular commmunity reside or work in the same census block.
