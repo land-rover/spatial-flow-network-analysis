@@ -34,7 +34,7 @@ A community is a collection of nodes (or edges) that are more closely related to
 
 In what follows, we find it useful to visualize a community as (1) a union of census block polygon geometries, (2) a convex hull of census block centroids, and (3) a bounding box of the convex hull of census block centroids.  
 
-Each representation is shown below for a reference community which happens to consist of 15 commuting workers, each housed or hosted in one of 6 census blocks (nodes) that are connected by 5 distinct paths (edges).
+Each representation is shown below for a randomly-selected reference community which happens to consist of 15 commuting workers, each housed or hosted in one of 6 census blocks (nodes) that are connected by 5 distinct paths (edges).
 
 * Polygon Union
 
@@ -69,9 +69,9 @@ We are interested in distinguishing these communities in the DC-Baltimore region
 Sekulic, Long, and Demsar (2021) offer a number of statistics for characterizing patterns of movement in a community.  Many of these are derived from the distribution of a community's edge bearings, which quantify the directional relationship between any two nodes connected by an edge.  
 ![](https://i.ibb.co/6w91qsn/bearing.png)
 
-If the standard deviation of the distribution of edge bearings is small, all of a community's edges point in roughly the same direction.  Sekulic, Long, and Demsar (2021) use this fact to distinguish directionally homogenous "movement-based" communities from "place-based" communities where there is no specific direction to the movements.
+If the standard deviation of the distribution of edge bearings is small, all of that community's edges point in roughly the same direction.  Sekulic, Long, and Demsar (2021) use this fact to distinguish directionally homogenous "movement-based" communities from "place-based" communities where there is no specific direction to the movements.
 
-Since we deliberatley have chosen to analyze edges that connect DC-based nodes to Baltimore-based nodes, the communities we study are movement-based and the corresponding range of edge standard deviations is small.
+Since we deliberatley have chosen to analyze edges that connect DC-based nodes to Baltimore-based nodes, the communities we study are generally movement-based and the corresponding range of edge standard deviations is small.
 
 In fact, among the 5,796 non-trivial communities, the smallest bearing standard deviation is 0.01 and the largest is 1.76.  Both measurements indicate communities with a slender convex hull, as shown below in Figures 1 and 2, respectively.  (Our reference community has a bearing standard deviation of 0.27.)
 
@@ -91,7 +91,18 @@ To see better the relationship between convex hull and elongation, note that the
 
 The larger convex hull in Figure 2 is obvious, but its large elongation stems not from size but from a substantially vertical orientation relative to the coordinate axes.
 
-By comparision, our reference community has an area of 167 square miles.  Its substantially diaganol orientation relative to the coordinate axes yields an elongation of 2.14, more comparable to the elongation of the convex hull shown in Figure 1 (which also has a diaganol orientation).  
+By comparision, our reference community has an area of 167 square miles.  Its substantially diagonal orientation relative to the coordinate axes yields an elongation of 2.14, more comparable to the elongation of the convex hull shown in Figure 1 (which also has a diagonal orientation).  
 
 ## Characterizing Socioeconomic Characteristics of a Community
 Given our focus on movement-based communities, it is more interesting to study the people that make them up.
+
+The DC-Baltimore communiting data contains demographic detail on the workers who reside or work in census blocks connected by a specific employment and housing arrangement.  For instance, we can learn about the age, earnings and industry sectors of the 15 workers in our reference community.
+
+Census Block (O) | Census Block (D) | Total Number of Workers | 29 or younger | 30 to 54 | 55 or older | $1250/month or less | $1251 to $3333 | more than $3333/month | goods producing | trade, transportation and utilities | all other services|
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+240276011042007 | 240338072002022 | 2 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+240276011042007 | 240317009012008 | 2 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+240276011042007 | 240338072001001 | 6 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+240276011042007 | 240317050004029 | 1 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+240276011042007 | 240317060131014 | 4 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
