@@ -1,8 +1,8 @@
 # Spatial-Flow Network Analysis
 
-A spatial-flow network is a mathematical model of the movement of matter through geographic space from an origin (O) to a destination (D).
+A spatial-flow network is a mathematical model of the movement of matter through geographic space from origins to destinations.
 
-Communication, social, and trade networks each take their names from the kind of matter that moves through them.
+Communication networks, social networks, trade networks et al each take their names from the kind of matter that moves through them.
 
 While techniques for spatial-flow network analysis are not new, the widespread availability of large spatial-flow network datasets is more recent.
 
@@ -24,7 +24,7 @@ We use CDLIB to implement the community detection technique of Sekulic, Long, an
 
 The data consists of 372,634 undirected edges, each connecting two census blocks from among the 63,728 that house or host a commuting worker--one in the Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area (MSA) and the other in the Baltimore-Columbia-Towson, MD MSA.  On average, 30.2 miles separate the census block pairs.
 
-In 2018, there were 172,500 DC-based Baltimore commuters and 213,491 Baltimore-based DC commuters in the region.  Our analysis uncovers 5,796 non-trivial communities (i.e. communities with more than three edges) with the largest of these consisting of 4,962 edges.  On average, non-trivial communities contain 18 edges.
+In 2018, there were 172,500 DC-based Baltimore commuters and 213,491 Baltimore-based DC commuters in the region.  Our analysis uncovers 5,796 non-trivial communities (i.e. communities with more than three edges), the largest of these consisting of 4,962 edges.  On average, non-trivial communities contain 18 edges.
 
 # Preliminary Observations
 Here is a basemap of the DC-Baltimore region, displayed on a Leaflet map via [folium](http://python-visualization.github.io/folium/).
@@ -42,7 +42,7 @@ Each representation is shown below for a randomly-selected reference community w
 
 Census blocks are statistical areas bounded by visible features such as roads, streams, and railroad tracks, and by nonvisible boundaries such as property lines, city, township, school district, county limits and short line-of-sight extensions of roads.  They are generally small in size (as small as 30,000 square feet).  In remote areas, however, census blocks may encompass hundreds of square miles.
 
-For readability, the census block centroids of the reference community have been tagged here with markers.
+For readability, the census block centroids of the reference community have been tagged here with markers.  The largest census block in this community--located a few miles northeast of Columbia, MD-- is just barely visible, in red, at the base of its marker. 
  
 * Convex Hull
 
@@ -62,7 +62,7 @@ A community is a collection of nodes (or edges) that are more closely related to
 
 Recently, planners have started to apply the network science concept of community to the problem of identifying "travel-to-work areas," spatially contiguous regions in which labor supply and demand are equal.
   
-We are interested in distinguishing these communities in the DC-Baltimore region, first according to their patterns of movement and second according to the socioeconomic characterisitics of the workers who belong to them.
+We are interested in distinguishing travel-to-work areas in the DC-Baltimore region, first according to their patterns of movement and second according to the socioeconomic characterisitics of the workers who belong to them.
 
 ## Characterizing Patterns of Movement in a Community
 
@@ -91,7 +91,7 @@ To see better the relationship between convex hull and elongation, note that the
 
 The larger convex hull in Figure 2 is obvious, but its large elongation stems not from size but from a substantially vertical orientation relative to the coordinate axes.
 
-By comparision, our reference community has an area of 167 square miles.  Its substantially diagonal orientation relative to the coordinate axes yields an elongation of 2.14, more comparable to the elongation of the convex hull shown in Figure 1 (which also has a diagonal orientation).  
+By comparision, our reference community has an area of 167 square miles.  Its substantially diagonal orientation relative to the coordinate axes yields an elongation of 2.14, more comparable to the elongation of the convex hull shown in Figure 1, which also has a diagonal orientation.  
 
 ## Characterizing Socioeconomic Characteristics of a Community
 Given our focus on movement-based communities, it is more interesting to study the people that make them up.
@@ -100,12 +100,14 @@ The DC-Baltimore communiting data contains demographic detail on the workers who
 
 Census Block (O) | Census Block (D) | Total Number of Workers | 29 or younger | 30 to 54 | 55 or older | $1250/month or less | $1251 to $3333 | more than $3333/month | goods producing | trade, transportation and utilities | all other services|
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-240276011042007 | 240338072002022 | 2 | - | - | - | - | - | - | - | - | - |
-240276011042007 | 240317009012008 | 2 | - | - | - | - | - | - | - | - | - |
-240276011042007 | 240338072001001 | 6 | - | - | - | - | - | - | - | - | - |
-240276011042007 | 240317050004029 | 1 | - | - | - | - | - | - | - | - | - |
-240276011042007 | 240317060131014 | 4 | - | - | - | - | - | - | - | - | - |
+240276011042007 | 240338072002022 | 2 | 0 | 2 | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 
+240276011042007 | 240317009012008 | 2 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 | 2 | 
+240276011042007 | 240338072001001 | 6 | 3 | 3 | 0 | 1 | 3 | 2 | 0 | 0 | 6 | 
+240276011042007 | 240317050004029 | 1 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 
+240276011042007 | 240317060131014 | 4 | 0 | 3 | 1 | 0 | 0 | 4 | 0 | 0 | 4 | 
  |  |  |  |  |  |  |  |  |  |  |  |
-| | TOTALS | 15 | - | - | - | - | - | - | - | - | - |
+| | TOTALS | 15 | 3 | 10 | 2 | 3 | 4 | 8 | 0 | 0 | 15 |
 
-Although our notation would appear to imply that all 15 workers reside in the same census block and work in different census blocks, this is not necessarily the case; the network edges are undirected.  Without further examination we don't know whether the commuting workers in this particular commmunity reside or work in the same census block.
+The workers in our reference community are high-wage service industry workers in their prime working years.
+  
+Although our labeling of the census blocks as "O" and "D" would appear to imply that all 15 workers reside in the same census block and work in different census blocks, this is not necessarily the case; the network edges are undirected.  Without further examination we can't know with certainty whether the commuting workers in this particular commmunity reside or work in the same census block.
