@@ -98,7 +98,7 @@ Given our focus on movement-based communities, it is more interesting to study t
 
 The DC-Baltimore communiting data contains demographic detail on the workers who reside or work in census blocks connected by a specific employment and housing arrangement.  For instance, we can learn about the age, earnings and industry sectors of the 15 workers in our reference community.
 
-| 0  | 0  | 0  | Earnings  |||
+    |
 Census Block (O) | Census Block (D) | Total Number of Workers | 29 or younger | 30 to 54 | 55 or older | $1250/month or less | $1251 to $3333 | more than $3333/month | goods producing | trade, transportation and utilities | all other services|
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 240276011042007 | 240338072002022 | 2 | 0 | 2 | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 
