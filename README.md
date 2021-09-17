@@ -22,9 +22,9 @@ The python library CDLIB offers easy and standardized access to methods for iden
 
 We use CDLIB to implement the community detection technique of Sekulic, Long, and Demsar (2021) on DC-Baltimore commuting data extracted from the U.S. Census Bureau's 2018 LEHD Origin-Destination Employment Statistics release.  
 
-The data consists of 372,634 undirected edges, each connecting two census blocks from among the 63,728 that house or host a commuting worker--one in the Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area (MSA) and the other in the Baltimore-Columbia-Towson, MD MSA.  On average, 30.2 miles separate the census block pairs.
+The data consists of 372,634 undirected edges, each connecting two census blocks from among the 63,728 that house or host a commuting worker--one in the Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area (MSA) and the other in the Baltimore-Columbia-Towson, MD MSA.  On average, 32.5 miles separate the census block pairs.
 
-In 2018, there were 172,500 DC-based Baltimore commuters and 213,491 Baltimore-based DC commuters in the region.  Our analysis uncovers 5,796 non-trivial communities (i.e. communities with more than three edges), the largest of these consisting of 4,962 edges.  On average, non-trivial communities contain 18 edges.
+In 2018, there were 172,500 DC-based Baltimore commuters and 213,491 Baltimore-based DC commuters in the region.  Our analysis uncovers 5,796 non-trivial communities (i.e. communities with more than three edges), the largest of these consisting of 4,962 edges.  On average, non-trivial communities contain 23 edges.
 
 # Preliminary Observations
 Here is a basemap of the DC-Baltimore region, displayed on a Leaflet map via [folium](http://python-visualization.github.io/folium/).
@@ -83,7 +83,7 @@ Figure 2.
 
 Another set of useful statistics are derived from the convex hull.  These include the area, which quantifies the magnitude of movement overall, and the bounding box elongation, which is the ratio between its longest and shortest sides.
 
-As mentioned, the origin-destination pairs we study are in different metropolitan regions, separated by a distance of 30 miles on average.  The corresponding convex hulls, therefore, generally have areas on the order of hundreds of square miles.
+As mentioned, the origin-destination pairs we study are in different metropolitan regions, separated by a distance of 33 miles on average.  The corresponding convex hulls, therefore, generally have areas on the order of hundreds of square miles.
 
 Among the 5,796 non-trivial communities, the smallest convex hull has an area of 10.5 square miles, while the the largest convex hull has an area of 7469.8 square miles.
 
@@ -98,7 +98,7 @@ Given our focus on movement-based communities, it is more interesting to study t
 
 The DC-Baltimore communiting data contains demographic detail on the workers who reside or work in census blocks connected by a specific employment and housing arrangement.  For instance, we can learn about the age, earnings and industry sectors of the 15 workers in our reference community.
 
-Census Block (O) | Census Block (D) | Total Number of Workers | Ages 29 or Younger | Ages 30 to 54 | Ages 55 or Older | Earnings $1250/month or less | Earnings $1251 to $3333 | Earnings More than $3333/month | Goods Producing | Trade, Transportation and Utilities | All other Services|
+Census Block (O) | Census Block (D) | Total Number of Workers | Age 29 or Younger | Age 30 to 54 | Age 55 or Older | Earning $1250/month or less | Earning $1251 to $3333 | Earning More than $3333/month | Goods Producing | Trade, Transportation and Utilities | All Other Services|
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 240276011042007 | 240338072002022 | 2 | 0 | 2 | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 
 240276011042007 | 240317009012008 | 2 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 | 2 | 
@@ -111,3 +111,4 @@ Census Block (O) | Census Block (D) | Total Number of Workers | Ages 29 or Young
 The workers in our reference community are high-wage service industry workers in their prime working years.
   
 Although our labeling of the census blocks as "O" and "D" would appear to imply that all 15 workers reside in the same census block and work in different census blocks, this is not necessarily the case; the network edges are undirected.  Without further examination we can't know with certainty whether the commuting workers in this particular commmunity reside or work in the same census block.
+
