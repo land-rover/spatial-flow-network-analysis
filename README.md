@@ -73,7 +73,7 @@ If the standard deviation of the distribution of edge bearings is small, all of 
 
 Since we deliberatley have chosen to analyze edges that connect DC-based nodes to Baltimore-based nodes, the communities we study are generally movement-based and the corresponding range of edge standard deviations is small.
 
-In fact, among the 5,796 non-trivial communities, the smallest bearing standard deviation is 0.01 and the largest is 1.76.  Both measurements indicate communities with a slender convex hull, as shown below in Figures 1 and 2, respectively.  (Our reference community has a bearing standard deviation of 0.27.)
+In fact, among the 5,796 non-trivial communities, the smallest bearing standard deviation is 0.01 radians and the largest is 1.76 radians.  Both measurements indicate communities with a slender convex hull, as shown below in Figures 1 and 2, respectively.  (Our reference community has a bearing standard deviation of 0.27 radians.)
 
 ![](https://i.ibb.co/WcGhXyW/minBsd.png)
 Figure 1.
