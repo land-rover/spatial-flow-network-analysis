@@ -83,9 +83,7 @@ Figure 2.
 
 Another set of useful statistics are derived from the convex hull.  These include the area, which quantifies the magnitude of movement overall, and the bounding box elongation, which is the ratio between its longest and shortest sides.
 
-As mentioned, the origin-destination pairs we study are in different metropolitan regions, separated by a distance of 33 miles on average.  The corresponding convex hulls, therefore, generally have areas on the order of hundreds of square miles.
-
-Among the 5,796 non-trivial communities, the smallest convex hull has an area of 10.5 square miles, while the the largest convex hull has an area of 7469.8 square miles.
+As mentioned, the origin-destination pairs we study are in different metropolitan regions, separated by a distance of 33 miles on average.  The corresponding convex hulls, therefore, generally have areas on the order of hundreds of square miles.  Among the 5,796 non-trivial communities, the smallest convex hull has an area of 10.5 square miles, while the the largest convex hull has an area of 7469.8 square miles.
 
 To see better the relationship between convex hull and elongation, note that the convex hull shown in Figure 1 has an area of 13.7 square miles and an elongation of 1.56, while the convex hull shown in Figure 2 has an area of 340.7 square miles and an elongation of 8.15.
 
