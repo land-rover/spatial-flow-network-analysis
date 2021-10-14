@@ -108,5 +108,5 @@ Census Block (O) | Census Block (D) | Total Number of Workers | Age 29 or Younge
 
 The workers in our reference community are high-wage service industry workers in their prime working years.
   
-Although our labeling of the census blocks as "O" and "D" would appear to imply that all 15 workers reside in the same census block and work in different census blocks, this is not necessarily the case; the network edges are undirected.  Without further examination we can't know with certainty whether the commuting workers in this particular commmunity reside or work in the same census block.
+Although our labeling of the census blocks as "O" and "D" implies that all 15 workers reside in the same census block and work in different census blocks, this is not necessarily the case; the network edges are undirected.  It is possible, of course, for information of this kind to be learned from further examination of the disaggregated data.
 
