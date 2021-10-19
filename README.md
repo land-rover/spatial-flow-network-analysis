@@ -24,7 +24,7 @@ We use CDLIB to implement the community detection technique of Sekulic, Long, an
 
 The data consists of 372,634 undirected edges, each connecting two census blocks from among the 63,728 that house or host a commuting worker--one in the Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area (MSA) and the other in the Baltimore-Columbia-Towson, MD MSA.  On average, 32.5 miles separate the census block pairs.
 
-In 2018, there were 172,489 DC-based Baltimore commuters and 213,502 Baltimore-based DC commuters in the region.  Our analysis uncovers 5,796 non-trivial communities (i.e. communities with more than three edges), the largest of these consisting of 4,962 edges.  On average, non-trivial communities contain 23 edges.
+In 2018, there were 172,500 DC-based Baltimore commuters and 213,491 Baltimore-based DC commuters in the region.  Our analysis uncovers 5,796 non-trivial communities (i.e. communities with more than three edges), the largest of these consisting of 4,962 edges.  On average, non-trivial communities contain 23 edges.
 
 # Preliminary Observations
 Here is a basemap of the DC-Baltimore region, displayed on a Leaflet map via [folium](http://python-visualization.github.io/folium/).
